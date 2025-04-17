@@ -8,10 +8,11 @@ RUN npm install
 
 COPY nest-cli.json ./
 COPY tsconfig.build.json tsconfig.json ./
+COPY types types
 COPY prisma prisma
 COPY src src
 
-RUN npm run build
+RUN npm run prisma generate && npm run build
 
 FROM node:lts-alpine AS main
 

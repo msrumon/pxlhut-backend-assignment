@@ -1,0 +1,24 @@
+services:
+  app:
+    depends_on:
+      database:
+        condition: service_healthy
+    build: .
+    environment:
+      DATABASE_URL: postgres://root:r00t@database:5432/pxlhut
+      JWT_SECRET: a1b2c3d4e5f64000abcda1b2c3d4e5f6
+      STRIPE_SECRET_KEY: sk_test_BQokikJOvBiI2HlWgH4olfQ2
+    ports:
+      - 3000:3000
+  database:
+    image: postgres:alpine
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: r00t
+      POSTGRES_DB: pxlhut
+    healthcheck:
+      test: pg_isready --username root --dbname pxlhut
+volumes:
+  postgres: ~
