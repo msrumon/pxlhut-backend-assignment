@@ -16,6 +16,8 @@ sudo chmod u+x ./tasks/*.sh
 
 Now, send requests as shown in all the `.http` files inside the [`tasks`](./tasks) directory. Make sure to replace `access_token`s and `refresh_token`s wherever necessary.
 
+Alternatively, you can import the [Postman collection](./tasks//collection.postman.json) and run the APIs as well.
+
 <!-- > If you wanna look into the application container and see what's happening in there, run `docker container attach pxlhut`. -->
 
 ## Stop
