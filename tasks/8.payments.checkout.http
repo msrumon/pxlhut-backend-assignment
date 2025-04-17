@@ -1,0 +1,15 @@
+POST /payments/checkout
+Host: 127.0.0.1:3000
+Authorization: Bearer <access_token>
+Content-Type: application/json
+Cookie: _token=<refresh_token>
+
+{
+  "items": [
+    {
+      "name": "Pxlhut",
+      "price": 9900,
+      "quantity": 1
+    }
+  ]
+}

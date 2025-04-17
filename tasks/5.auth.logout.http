@@ -1,0 +1,3 @@
+POST /auth/logout
+Host: 127.0.0.1:3000
+Cookie: _token=<refresh_token>

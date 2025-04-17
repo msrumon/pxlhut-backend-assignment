@@ -1,0 +1,8 @@
+POST /auth/register
+Host: 127.0.0.1:3000
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "password": "s3cr3t"
+}

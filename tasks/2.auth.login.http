@@ -1,0 +1,9 @@
+POST /auth/login
+Host: 127.0.0.1:3000
+Content-Type: application/json
+Cookie: _token=<refresh_token>
+
+{
+  "email": "user@example.com",
+  "password": "s3cr3t"
+}

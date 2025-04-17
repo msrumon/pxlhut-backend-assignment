@@ -1,0 +1,14 @@
+# Dependency directory
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Cache
+.cache
+
+# Build output
+dist/
+
+# Prisma generated client
+prisma/client/
